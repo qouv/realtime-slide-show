@@ -10,7 +10,6 @@ const slideRoutes = require('./routes/slide');
 
 app.use(slideRoutes);
 
-
 io.on('connection', (socket) => {
   console.log('user connected');
   
@@ -23,7 +22,7 @@ io.on('connection', (socket) => {
   });
 });
 
-
+//comment will be added
 server.listen(process.env.PORT || 3000, () => {
     console.log('Server is listening on port ' + server.address().port);
-})
+});
