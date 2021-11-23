@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Real-time Slides Tutorial | Show</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style type="text/css">
+
+    .control-table {
+      width:75%;
+      margin:auto;
+    }
+   
+    .changer-slide-content {
+      width: 75%;
+      height: 75%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .changer-slide-container {
+
+   
+  
+      background-color: white;
+      border-style: solid;
+      border-width: 1px;
+      border-color: beige;
+      border-radius:15px;
+    }
+
+    .slide-title {
+      font-family:system-ui;
+      font-size:1.5vw !important;
+    }
+    .slide-text {
+      font-family:system-ui;
+      font-size:1.3vw !important;
+      font-weight: 400 !important;
+    }
+    
+    .column {
+       float: left;
+       width: 25.33%;
+       margin:10px;
+       padding: 10px;
+      cursor: pointer;
+     
+    }
+
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+  </style>
+</head>
+<body style="background-color: #e0e0e0;">
+
+  <div class="control-table">
+    <div class="slide-changer">
+      <div class="row">
+        <div class="column" >
+          <div class="changer-slide-container">
+           <div class="changer-slide-content">
+              <div class="slide-title">
+                <h1 class="title">Başlık 1</h1>
+              </div>
+              <div class="slide-text">
+                <p class="text">Uzun bir yazı yazalım hadi hadi hadi hadi haiadfafad cam onnnnn</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column" >
+          <div class="changer-slide-container">
+           <div class="changer-slide-content">
+              <div class="slide-title">
+                <h1 class="title">Başlık 2</h1>
+              </div>
+              <div class="slide-text">
+                <p class="text">Yazı 2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column" >
+          <div class="changer-slide-container">
+           <div class="changer-slide-content">
+              <div class="slide-title">
+                <h1 class="title">Başlık 1</h1>
+              </div>
+              <div class="slide-text">
+                <p class="text">Yazı 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+        
+
+
+      </div>
+      <div class="row">
+        <div class="column" >
+          <div class="changer-slide-container">
+           <div class="changer-slide-content">
+              <div class="slide-title">
+                <h1 class="title">Başlık 1</h1>
+              </div>
+              <div class="slide-text">
+                <p class="text">Yazı 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column" >
+          <div class="changer-slide-container">
+           <div class="changer-slide-content">
+              <div class="slide-title">
+                <h1 class="title">Başlık 1</h1>
+              </div>
+              <div class="slide-text">
+                <p class="text">Yazı 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column" >
+          <div class="changer-slide-container">
+           <div class="changer-slide-content">
+              <div class="slide-title">
+                <h1 class="title">Başlık 1</h1>
+              </div>
+              <div class="slide-text">
+                <p class="text">Yazı 1</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+<script type="text/javascript">
+
+const socket = io();
+
+function sendContent(e){
+
+     // let title = $(e).find('.title').text;
+  
+
+     
+}
+
+$('.column').on('click', function() {
+  
+  let title =  $(this).find('.title').text();
+  let text =  $(this).find('.text').text();
+
+  
+  if(title && text ){
+        socket.emit('change content', {title: title, text: text});
+      }   
+});
+
+
+</script>
+</body>
+</html>
