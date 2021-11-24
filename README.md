@@ -4,6 +4,8 @@ A project that I created to learn Socket.io applications.
 
 ![This is an image](https://raw.githubusercontent.com/omerization/realtime-slide-show/master/imgs/realtime-slider1.gif)
 
+On the left `localhost:3000` and on the right `localhost:3000/edit` opened in two different browser windows
+
 # Install the project
 ```
 git clone https://github.com/nafeu/realtime-slides-tut.git [PROJECT_NAME]
