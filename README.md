@@ -15,7 +15,7 @@ npm install
 
 # Usage
 
-Run npm start inside the project directory.
+Run `npm start` inside the project directory.
 
 #### Presentation
 Open `localhost:3000` in your browser
