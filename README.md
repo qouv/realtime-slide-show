@@ -8,7 +8,7 @@ On the left `localhost:3000` and on the right `localhost:3000/edit` opened in tw
 
 # Install the project
 ```
-git clone https://github.com/nafeu/realtime-slides-tut.git [PROJECT_NAME]
+git clone https://github.com/omerization/realtime-slide-show.git [PROJECT_NAME]
 cd [PROJECT_NAME]
 npm install
 ```
